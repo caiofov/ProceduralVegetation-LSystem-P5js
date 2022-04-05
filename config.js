@@ -5,7 +5,7 @@ CNV_HEIGHT = 400
 CNV_WIDTH = 800
 
 //pace of the figure: how many pixels it will walk to the next generated point
-const PACE = 5 
+const PACE = 3
 
 //L-SYSTEM - rules of transformation (if you have no idea how to use it, please consider reading the instructions in readme.md file)
 const L_SYSTEM_LEFT = ["f"]
@@ -18,4 +18,4 @@ const INITIAL_X = 0
 const INITIAL_Y = CNV_HEIGHT/2
  
 
-const EXPANSIONS = 3 //number of iterations in order to generate a greater figure
+const EXPANSIONS = 6 //number of iterations in order to generate a greater figure

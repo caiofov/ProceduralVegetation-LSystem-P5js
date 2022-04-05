@@ -52,16 +52,17 @@ class PlantGenerator{
         
         for(let l = 0; l < this.points.length-1; l++){
             line(this.points[l].x,this.points[l].y,this.points[l+1].x,this.points[l+1].y)
-            circle(this.points[l+1].x,this.points[l+1].y,4)
+            // circle(this.points[l+1].x,this.points[l+1].y,4)
         }
     }
 
     generate_points(){
         let last_point = this.initial_point
+        let current_point
         
         for(let l=0; l< this.generated_string.length; l++){
             let current_character = this.generated_string[l]
-            let current_point
+            
       
             switch (current_character){
                 case "f": //move foward
@@ -75,11 +76,12 @@ class PlantGenerator{
                 case "-": //turn right
                     current_point = this.move_right(last_point)
                     break
-                case "[":
-                    this.save_position()
+                case "[": //save the current position
+                    this.save_position(current_point)
                     break
-                case "]":
-                    this.load_position()
+                case "]": //load the saved position
+                    current_point = this.load_position()
+                    print("posiçao carregada" , current_point)
                     break
                     
                 default:
@@ -92,11 +94,13 @@ class PlantGenerator{
     
     //moving methods
     move_forward(v){
+        print(v)
         let v2 = v.copy()
         let ang = v2.angleBetween(createVector(1,0)) == 0 ? 0 : this.angle_acc
         
         v2.x = v.x + this.pace*cos(ang)
         v2.y = v.y + this.pace*sin(ang)
+        print("moveu pra frente")
         return v2
     }
     move_left(v) {
@@ -104,7 +108,7 @@ class PlantGenerator{
         this.angle_acc += this.default_angle
         v2.x = v.x + this.pace*cos(this.angle_acc)
         v2.y = v.y + this.pace*sin(this.angle_acc)
-        
+        print("moveu para a esquerda")
         return v2
     }
     move_right(v){
@@ -112,17 +116,18 @@ class PlantGenerator{
         let v2 = this.move_forward(v)
         v2.x = v.x + this.pace*cos(this.angle_acc)
         v2.y = v.y + this.pace*sin(this.angle_acc)
-    
+        print("moveu para a direita")
         return v2
     }
-    save_position(){
-        this.saved_position = this.current_point
+    save_position(current_point){
+        this.saved_position = current_point
         this.saved_angle = this.angle_acc
+        print("salvou a posiçao")
     }
     load_position(){
-        if(this.saved_position && this.saved_angle){
-            this.angle_acc = this.saved_angle
-            return this.saved_position
-        }
+        
+        this.angle_acc = this.saved_angle
+        return this.saved_position
+       
     }
 }
