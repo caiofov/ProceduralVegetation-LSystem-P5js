@@ -1,4 +1,4 @@
-class KochCurve{
+class PlantGenerator{
     constructor(initial_point, pace, l_system_left,l_system_right, seed, expansions){
         this.initial_point = initial_point
         this.seed = seed
@@ -8,8 +8,12 @@ class KochCurve{
         this.generated_string = undefined
         this.pace = pace
         this.points = [initial_point]
+        
         this.angle_acc = 0 //angle accumulator
-        this.default_angle = Math.PI/2 //default angle
+        this.default_angle = Math.PI/6 //default angle -> 30 degrees
+        
+        this.saved_position = undefined
+        this.saved_angle = undefined
     }
 
     generate(){ //generates the string using the l_system previously defined
@@ -60,20 +64,26 @@ class KochCurve{
             let current_point
       
             switch (current_character){
-              case "f": //move foward
-                current_point = this.move_forward(last_point)
-                break
-              
-              case "+": //turn left
-                current_point = this.move_left(last_point)
-                break
-              
-              case "-": //turn right
-                current_point = this.move_right(last_point)
-                break
-              
-              default:
-                break
+                case "f": //move foward
+                    current_point = this.move_forward(last_point)
+                    break
+                
+                case "+": //turn left
+                    current_point = this.move_left(last_point)
+                    break
+                
+                case "-": //turn right
+                    current_point = this.move_right(last_point)
+                    break
+                case "[":
+                    this.save_position()
+                    break
+                case "]":
+                    this.load_position()
+                    break
+                    
+                default:
+                    break
             }
             this.points.push(current_point)
             last_point = current_point
@@ -104,5 +114,15 @@ class KochCurve{
         v2.y = v.y + this.pace*sin(this.angle_acc)
     
         return v2
+    }
+    save_position(){
+        this.saved_position = this.current_point
+        this.saved_angle = this.angle_acc
+    }
+    load_position(){
+        if(this.saved_position && this.saved_angle){
+            this.angle_acc = this.saved_angle
+            return this.saved_position
+        }
     }
 }

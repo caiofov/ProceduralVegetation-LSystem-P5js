@@ -9,7 +9,7 @@ const PACE = 5
 
 //L-SYSTEM - rules of transformation (if you have no idea how to use it, please consider reading the instructions in readme.md file)
 const L_SYSTEM_LEFT = ["f"]
-const L_SYSTEM_RIGHT = ["f+f-f-f+f"]
+const L_SYSTEM_RIGHT = ["f[-f]f[+f][f]"]
 
 const SEED = "f" //initial string to apply the rules of the l-system
 
