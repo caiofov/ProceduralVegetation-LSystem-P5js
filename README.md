@@ -29,7 +29,8 @@ Consider A,B,C,D as statements and the following L-system:
 You should rewrite the variables as:<br>
 `L_SYSTEM_LEFT = [A, C]` <br>
 `L_SYSTEM_RIGHT = [B, D]`
-
-<p>Consider writing the rules sorted by hierarchy if necessary.</p>
+<br>
+Consider writing the rules sorted by hierarchy if necessary.
+<br>
 You can find out more L-system for generating different types of vegetation on *files/l_systems.js*
 
