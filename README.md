@@ -19,8 +19,8 @@ First, you should know I've adopted the same alphabet from the book:
 - **f** -> move forward
 - **+** -> turn 30 degrees left
 - **-** -> turn 30 degrees right
-- **[** -> save the current position
-- **]** -> loads the saved position
+- **[** -> adds the current position to the saved positions stack
+- **]** -> pops the last saved position from the stack
 
 Consider A,B,C,D as statements and the following L-system:
 1. A -> B
@@ -31,4 +31,5 @@ You should rewrite the variables as:<br>
 `L_SYSTEM_RIGHT = [B, D]`
 
 <p>Consider writing the rules sorted by hierarchy if necessary.</p>
+<p>You can find out more L-system for generating different types of vegetation on *files/l_systems.js* </p>
 
