@@ -31,5 +31,5 @@ You should rewrite the variables as:<br>
 `L_SYSTEM_RIGHT = [B, D]`
 
 <p>Consider writing the rules sorted by hierarchy if necessary.</p>
-<p>You can find out more L-system for generating different types of vegetation on *files/l_systems.js* </p>
+You can find out more L-system for generating different types of vegetation on *files/l_systems.js*
 

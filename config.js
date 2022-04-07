@@ -17,7 +17,7 @@ const SEED = "f" //initial string to apply the rules of the l-system
 //starting point of the figure
 const INITIAL_X = 0
 const INITIAL_Y = CNV_HEIGHT/2
- 
+
 
 const EXPANSIONS = 4 //number of iterations in order to generate a greater figure
 
