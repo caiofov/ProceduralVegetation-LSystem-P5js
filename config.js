@@ -5,7 +5,7 @@ CNV_HEIGHT = 400
 CNV_WIDTH = 800
 
 //pace of the figure: how many pixels it will walk to the next generated point
-const PACE = 1
+const PACE = 5
 
 //L-SYSTEM - rules of transformation (if you have no idea how to use it, please consider reading the instructions in readme.md file)
 //see suggested l-systems on files/l_systems.js
