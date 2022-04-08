@@ -1,6 +1,7 @@
 # Procedural vegetation generation using L-System
-<p>A procedural vegetation generator algorithm using L-system. This algorithm was implemented in JavaScript using P5.js library. This idea was inspired by the book <b>"Procedural Content Generation in Games"</b>, chapter 5 "Grammars and L-systems with application to vegetation and levels" </p>
+A procedural vegetation generator algorithm using L-system. This algorithm was implemented in JavaScript using P5.js library. This idea was inspired by the book **"Procedural Content Generation in Games"**, chapter 5 "Grammars and L-systems with application to vegetation and levels"
 ## Instructions
+
 ### How to see the image
 Open the *index.html* file in a local server
 
@@ -29,7 +30,8 @@ Consider A,B,C,D as statements and the following L-system:
 You should rewrite the variables as:<br>
 `L_SYSTEM_LEFT = [A, C]` <br>
 `L_SYSTEM_RIGHT = [B, D]`
-
-<p>Consider writing the rules sorted by hierarchy if necessary.</p>
+<br>
+Consider writing the rules sorted by hierarchy if necessary.
+<br>
 You can find out more L-system for generating different types of vegetation on *files/l_systems.js*
 
