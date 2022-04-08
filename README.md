@@ -1,5 +1,8 @@
 # Procedural vegetation generation using L-System
 A procedural vegetation generator algorithm using L-system. This algorithm was implemented in JavaScript using P5.js library. This idea was inspired by the book **"Procedural Content Generation in Games"**, chapter 5 "Grammars and L-systems with application to vegetation and levels"
+<br>
+<br>
+<img src="https://github.com/caiofov/ProceduralVegetation-LSystem-P5js/blob/main/img/img1.png?raw=true" alt="First generated plant example" width="40%"> <img src="https://github.com/caiofov/ProceduralVegetation-LSystem-P5js/blob/main/img/img2.png?raw=true" alt="Second generated plant example" width="41%">
 ## Instructions
 
 ### How to see the image
